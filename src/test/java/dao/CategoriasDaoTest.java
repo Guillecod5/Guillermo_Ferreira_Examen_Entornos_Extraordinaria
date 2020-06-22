@@ -111,9 +111,9 @@ public class CategoriasDaoTest {
         
         //ACTUALIZACION CON ERRORES
         Categoria categoriaModificado2 = new Categoria(id,null,"PruebaNombre");
-        expResult = null;
+        expResult = 0;
         result = instance.update(categoriaModificado2);
-        
+        assertEquals(expResult, result);
         instance.delete(id);
     }
 
